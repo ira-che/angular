@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { DropdownFilterComponent } from './page/filter/dropdown-filter/dropdown-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
