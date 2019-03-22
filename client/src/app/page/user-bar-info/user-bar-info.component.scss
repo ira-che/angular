@@ -1,0 +1,33 @@
+$color-text: #2699FB;
+
+.user-bar-info{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  height: auto;
+  background-color: white;
+  align-items: center;
+  padding-top: 20px;
+
+  color: $color-text;
+  text-align: center;
+}
+
+.main-user-info {
+  margin-top: 20px;
+  :first-child{
+    font: bold 40px Arial sans-serif;
+  }
+  :last-child{
+    font: bold italic 25px sans-serif;
+  }
+}
+.additional-info{
+  margin-top: 25px;
+  :first-child{
+    font: normal 14px Arial sans-serif;
+  }
+  :last-child{
+    font: bold italic 25px sans-serif;
+  }
+}
