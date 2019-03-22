@@ -104,6 +104,10 @@ export class PageComponent implements OnInit {
 
   ngOnInit() {}
 
+  filterGrids = () => {
+    return this.jsonData.filters.length ? ('filter-col-' + this.jsonData.filters.length) : '';
+  }
+
   selectFilterOption = (data: any) => {
     if (this.jsonData.filters.length) {
       this.jsonData.filters = this.jsonData.filters.map((item, index) =>

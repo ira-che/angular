@@ -7,8 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
   @Input() filters: [];
+  @Input() cssClass: string;
   @Output() getFilter = new EventEmitter();
 
   constructor() { }
   ngOnInit() {}
+
+  makeFullWidth = () => {
+    return this.cssClass.length ? 'width-100' : '';
+  }
 }

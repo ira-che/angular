@@ -6,6 +6,10 @@ $bg2-color: #fff;
 $base-font-size: 14px;
 $base-line-height: 16px;
 
+.btn-group.width-100 {
+  width: 100%;
+}
+
 .btn.dropdown-toggle.filter-el{
   padding: 17px 56px 17px 20px;
   border-radius: 0;
@@ -14,6 +18,12 @@ $base-line-height: 16px;
   background: $bg2-color;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  text-align: left;
+}
+
+.btn-group.width-100 .btn.dropdown-toggle.filter-el {
+  width: 100%;
+  text-align: left;
 }
 
 .btn.dropdown-toggle.filter-el:focus,
@@ -44,6 +54,10 @@ $base-line-height: 16px;
   border-color: $case-color;
   color: $primary-color;
   background: $bg2-color;
+}
+
+.btn-group.width-100 .dropdown-menu.filter-el{
+  width: 100%;
 }
 
 .dropdown-menu.filter-el li{
