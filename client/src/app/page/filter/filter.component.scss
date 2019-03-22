@@ -1,0 +1,7 @@
+.filter-item{
+  display: inline-block;
+}
+
+.filter-item:not(:first-child){
+  margin:  0 0 0 20px;
+}
