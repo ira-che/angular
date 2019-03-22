@@ -7,7 +7,12 @@
       Paste custom sidebar tag here
     </div>
     <main class="col-lg-8 content-wrapper">
-      Paste Page content here
+      <div class="container-fluid filter-wrapper">
+          <app-filter class="container-fluid" [filters]=jsonData.filters (getFilter)="selectFilterOption($event)"></app-filter>   
+      </div>
+      <div class="container-fluid list-wrapper">
+        <app-list [tasks]="jsonData.tasks"></app-list>
+      </div>
     </main>
   </section>
 </div>

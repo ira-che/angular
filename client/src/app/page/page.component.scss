@@ -21,12 +21,23 @@ $primary-color: #2699FB;
 $case-color: #BCE0FD;
 $bg-color: #F1F9FF;
 $bg2-color: #fff;
+$base-font-size: 14px;
+$base-line-height: 16px;
 
 .main-wrapper {
   min-height: 100vh;
   font-family: $font-stack;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   background: $bg-color;
   color: $primary-color;
+}
+
+.filter-wrapper {
+  margin-bottom: 15px;
+}
+
+.filter-wrapper  > *{
+  display: flex;
+  justify-content: space-between;
 }
