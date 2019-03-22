@@ -1,0 +1,33 @@
+<accordion>
+  <accordion-group #group *ngFor="let item of items">
+    <div accordion-heading class="heading-grid">
+      <div class="heading-text">
+        <h5>{{item.taskName}}</h5>
+        <p>{{item.shortDes}}</p>
+      </div>
+      <div class="heading-filter">
+        <p>{{item.status}}</p>
+      </div>
+      <div class="heading-date">
+        <p>{{item.date}}</p>
+      </div>
+      <div class="heading-icon">
+      </div>
+    </div>
+  <div class="body-text">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis</p>
+  </div>
+  <div class="body-grid">
+    <div class="body-from">
+      <span>From: </span>
+      <span class="bold">Alex Somename</span>
+    </div>
+    <div class="re-assign">
+      <button type="submit" class="btn btn-outline-primary text-reassign">RE-ASSIGN</button>
+    </div>
+  </div>
+  
+    
+
+  </accordion-group>
+</accordion>
