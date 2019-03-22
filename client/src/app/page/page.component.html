@@ -3,16 +3,16 @@
       Paste custom header tag here
   </header>
   <section class="container page-wrapper">
-    <div class="col-lg-4 sidebar-wrapper">
-      Paste custom sidebar tag here
+    <div class="row">
+      <div class="col-lg-4 sidebar-wrapper">
+        <app-user-bar-info class="user-bar-info" [userinfo]="jsonData.userinfo"></app-user-bar-info>
+      </div>
+      <main class="col-lg-8 content-wrapper">
+          <app-filter class="container-fluid filter-wrapper" [filters]=jsonData.filters (getFilter)="selectFilterOption($event)"></app-filter>
+          <div class="container-fluid list-wrapper">
+            <app-list [tasks]="jsonData.tasks"></app-list>
+          </div>
+      </main>
     </div>
-    <main class="col-lg-8 content-wrapper">
-      <div class="container-fluid filter-wrapper">
-          <app-filter class="container-fluid" [filters]=jsonData.filters (getFilter)="selectFilterOption($event)"></app-filter>   
-      </div>
-      <div class="container-fluid list-wrapper">
-        <app-list [tasks]="jsonData.tasks"></app-list>
-      </div>
-    </main>
   </section>
 </div>

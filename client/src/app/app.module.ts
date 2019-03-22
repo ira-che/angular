@@ -12,6 +12,10 @@ import { FilterComponent } from './page/filter/filter.component';
 import { DropdownFilterComponent } from './page/filter/dropdown-filter/dropdown-filter.component';
 import { ListComponent } from './page/list/list.component';
 import { AccordionComponent } from './page/list/accordion/accordion.component';
+import { UserBarInfoComponent } from './page/user-bar-info/user-bar-info.component';
+import { LinkToProfilComponent } from './page/user-bar-info/link-to-profil/link-to-profil.component';
+import { UserImageComponent } from './page/user-bar-info/user-image/user-image.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { AccordionComponent } from './page/list/accordion/accordion.component';
     FilterComponent,
     DropdownFilterComponent,
     ListComponent,
-    AccordionComponent
+    AccordionComponent,
+    UserBarInfoComponent,
+    LinkToProfilComponent,
+    UserImageComponent
   ],
   imports: [
     BrowserModule,

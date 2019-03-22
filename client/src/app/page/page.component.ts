@@ -11,6 +11,14 @@ export class PageComponent implements OnInit {
 
   constructor() {
     this.jsonData = {
+      userinfo: {
+        name: 'Name',
+        surname: 'Surname',
+        position: 'position',
+        managerName: 'Manager Has',
+        managerSurname: 'Name',
+        departament: 'Departament Has Name'
+      },
       tasks: [
         {
           name: 'Upcoming task name',
