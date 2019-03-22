@@ -17,8 +17,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    AccordionModule.forRoot()
+    AppRoutingModule,
+    AccordionModule.forRoot() // comment
   ],
   providers: [],
   bootstrap: [AppComponent]
