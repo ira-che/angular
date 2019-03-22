@@ -1,10 +1,10 @@
 <div class="btn-group" dropdown>
   <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle filter-el" aria-controls="dropdown-basic">
-    {{ getTitle() }} <span class="caret"></span>
+    {{ title }} <span class="caret"></span>
   </button>
   <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu filter-el" role="menu" aria-labelledby="button-basic">
-    <li role="menuitem" *ngFor="let el of filterItem['arr']; let i = index;">
-      <a class="dropdown-item {{ isSelected(i) }}" href="#" (click)="this.filterVal.emit(i);$event.preventDefault();">{{ el }}</a>
+    <li role="menuitem" *ngFor="let el of options; let i = index;">
+      <a class="dropdown-item {{ isSelected(i) }}" href="#" (click)="selectIt(i, $event)">{{ el }}</a>
     </li>
   </ul>
 </div>

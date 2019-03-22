@@ -11,7 +11,7 @@
           <app-filter class="container-fluid" [filters]=jsonData.filters (getFilter)="selectFilterOption($event)"></app-filter>   
       </div>
       <div class="container-fluid list-wrapper">
-        <app-list></app-list>
+        <app-list [tasks]="jsonData.tasks"></app-list>
       </div>
     </main>
   </section>
