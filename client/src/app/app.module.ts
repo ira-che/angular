@@ -10,13 +10,17 @@ import { PageComponent } from './page/page.component';
 
 import { FilterComponent } from './page/filter/filter.component';
 import { DropdownFilterComponent } from './page/filter/dropdown-filter/dropdown-filter.component';
+import { ListComponent } from './page/list/list.component';
+import { AccordionComponent } from './page/list/accordion/accordion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
     FilterComponent,
-    DropdownFilterComponent
+    DropdownFilterComponent,
+    ListComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
