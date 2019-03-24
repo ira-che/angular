@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
+import { FilterForTasksPipe } from './app.pipe.filterForTasks';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
@@ -27,7 +29,8 @@ import { UserImageComponent } from './page/user-bar-info/user-image/user-image.c
     AccordionComponent,
     UserBarInfoComponent,
     LinkToProfilComponent,
-    UserImageComponent
+    UserImageComponent,
+    FilterForTasksPipe
   ],
   imports: [
     BrowserModule,

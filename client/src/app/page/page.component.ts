@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page',
@@ -23,7 +23,8 @@ export class PageComponent implements OnInit {
         {
           name: 'Upcoming task name',
           excerpt: 'This content is straight in the template.',
-          status: 'LOW',
+          status: { name: 'LOW', value: 2 },
+          type: { name: 'issue', value: 1 },
           date: '22/03/2019',
           author: 'Alex Somename',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ' +
@@ -33,7 +34,8 @@ export class PageComponent implements OnInit {
         {
           name: 'Upcoming task name2',
           excerpt: 'This content is straight in the template2.',
-          status: 'HIGHT',
+          status: { name: 'HIGHT', value: 0 },
+          type: { name: 'issue', value: 1 },
           date: '23/03/2019',
           author: 'Alex3 Somename',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ' +
@@ -43,7 +45,8 @@ export class PageComponent implements OnInit {
         {
           name: 'Upcoming task name3',
           excerpt: 'This content is straight in the template3.',
-          status: 'LOW',
+          status: { name: 'LOW', value: 2 },
+          type: { name: 'task', value: 0 },
           date: '24/03/2019',
           author: 'Alex2 Somename',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ' +
@@ -53,7 +56,8 @@ export class PageComponent implements OnInit {
         {
           name: 'Upcoming task name4',
           excerpt: 'This content is straight in the template4.',
-          status: 'MEDIUM',
+          status: { name: 'MEDIUM', value: 1 },
+          type: { name: 'task', value: 0 },
           date: '25/03/2019',
           author: 'Alex1 Somename',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ' +
@@ -63,7 +67,8 @@ export class PageComponent implements OnInit {
         {
           name: 'Upcoming task name5',
           excerpt: 'This content is straight in the template5.',
-          status: 'LOW',
+          status: { name: 'LOW', value: 2 },
+          type: { name: 'task', value: 0 },
           date: '26/03/2019',
           author: 'Alex2 Somename',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ' +
@@ -73,22 +78,24 @@ export class PageComponent implements OnInit {
       ],
       filters: [
         {
+          name: 'type',
           isCalendar: false,
-          defaultValue: 1,
+          defaultValue: -1,
           options: [
-            'Show all tasks',
-            'Show delegates tasks only',
-            'Show issues only'
+            { name: 'Show all tasks', value: -1 },
+            { name: 'Show delegates tasks only', value: 0 },
+            { name: 'Show issues only', value: 1 },
           ],
         },
         {
+          name: 'status',
           isCalendar: false,
-          defaultValue: 0,
+          defaultValue: -1,
           options: [
-            'Filter by Status',
-            'High',
-            'Normal',
-            'Low'
+            { name: 'Filter by Status', value: -1 },
+            { name: 'High', value: 0 },
+            { name: 'Normal', value: 1 },
+            { name: 'Low', value: 2 },
           ],
         },
         // {
@@ -110,8 +117,14 @@ export class PageComponent implements OnInit {
 
   selectFilterOption = (data: any) => {
     if (this.jsonData.filters.length) {
-      this.jsonData.filters = this.jsonData.filters.map((item, index) =>
-        index === data.filterId ? {isCalendar: item.isCalendar, defaultValue: data.optionId, options: item.options} : item);
+      this.jsonData.filters = this.jsonData.filters.map(
+          (item, index) => index === data.filterId ? {
+                          name: item.name,
+                          isCalendar: item.isCalendar,
+                          defaultValue: data.optionId,
+                          options: item.options
+                        } : item
+        );
     }
   }
 }

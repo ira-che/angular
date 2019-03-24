@@ -11,19 +11,19 @@ export class DropdownFilterComponent {
   @Input() cssClass: string;
   @Output() filterVal = new EventEmitter();
   title: string;
-  value: number;
   options: [];
 
   constructor() { }
 
   ngOnInit() {
-    this.value = this.filterItem.defaultValue;
     this.options = this.filterItem.options;
-    this.title = this.options[this.value];
+    let titleObj: {name, value};
+    titleObj = this.options.filter((item: {value, name}) => this.filterItem.defaultValue === item.value )[0];
+    this.title = titleObj.name;
   }
 
   isSelected = (i) => {
-    return this.value === i ? 'active' : '';
+    return this.filterItem.defaultValue === i ? 'active' : '';
   }
 
   selectIt = (i, event) => {

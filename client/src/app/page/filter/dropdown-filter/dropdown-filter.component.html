@@ -3,8 +3,8 @@
     {{ title }} <span class="caret"></span>
   </button>
   <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu filter-el" role="menu" aria-labelledby="button-basic">
-    <li role="menuitem" *ngFor="let el of options; let i = index;">
-      <a class="dropdown-item {{ isSelected(i) }}" href="#" (click)="selectIt(i, $event)">{{ el }}</a>
+    <li role="menuitem" *ngFor="let opt of options;">
+      <a class="dropdown-item {{ isSelected(opt.value) }}" href="#" (click)="selectIt(opt.value, $event)">{{ opt.name }}</a>
     </li>
   </ul>
 </div>

@@ -73,3 +73,15 @@ $base-line-height: 16px;
     margin-bottom: 40px;
   }
 }
+
+.filter-wrapper.filter-col-2 {
+  @media (max-width: 760px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $grid-gutter-width;
+
+    @media (max-width: 539px){
+      display: block;
+    }
+  }
+}
