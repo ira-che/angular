@@ -16,7 +16,7 @@ import { DropdownFilterComponent } from './page/filter/dropdown-filter/dropdown-
 import { ListComponent } from './page/list/list.component';
 import { AccordionComponent } from './page/list/accordion/accordion.component';
 import { UserBarInfoComponent } from './page/user-bar-info/user-bar-info.component';
-import { LinkToProfilComponent } from './page/user-bar-info/link-to-profil/link-to-profil.component';
+import { LinkToProfileComponent } from './page/user-bar-info/link-to-profile/link-to-profile.component';
 import { UserImageComponent } from './page/user-bar-info/user-image/user-image.component';
 import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
 
@@ -31,7 +31,7 @@ import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-prof
     ListComponent,
     AccordionComponent,
     UserBarInfoComponent,
-    LinkToProfilComponent,
+    LinkToProfileComponent,
     UserImageComponent,
     FilterForTasksPipe,
     NavbarProfileComponent

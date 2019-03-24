@@ -14,12 +14,13 @@ $base-line-height: 16px;
   background-color: white;
   align-items: center;
   padding-top: 20px;
+  padding-bottom: 20px;
   color: $primary-color;
   text-align: center;
 }
 
 .main-user-info {
-  margin-top: 20px;
+  margin-top: 40px;
   :first-child{
     font-size: 40px;
     font-weight: bold;
@@ -30,14 +31,7 @@ $base-line-height: 16px;
     font-style: italic;
   }
 }
-.additional-info{
-  margin-top: 25px;
-  :first-child{
-    font-size: $base-font-size;
-  }
-  :last-child{
-    font-size: 25px;
-    font-weight: bold;
-    font-style: italic;
-  }
+
+.additional-info {
+  margin-top: 40px;
 }
