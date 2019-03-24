@@ -36,6 +36,7 @@ $base-line-height: 16px;
   line-height: $base-line-height;
   background: $bg-color;
   color: $primary-color;
+  overflow: hidden;
 }
 
 .filter-wrapper {

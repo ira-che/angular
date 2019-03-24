@@ -9,6 +9,7 @@ import { FilterForTasksPipe } from './app.pipe.filterForTasks';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
+import { NavbarComponent } from './page/navbar/navbar.component';
 
 import { FilterComponent } from './page/filter/filter.component';
 import { DropdownFilterComponent } from './page/filter/dropdown-filter/dropdown-filter.component';
@@ -24,6 +25,7 @@ import { UserImageComponent } from './page/user-bar-info/user-image/user-image.c
     AppComponent,
     PageComponent,
     FilterComponent,
+    NavbarComponent,
     DropdownFilterComponent,
     ListComponent,
     AccordionComponent,
