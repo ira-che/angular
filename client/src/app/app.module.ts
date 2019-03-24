@@ -18,6 +18,7 @@ import { AccordionComponent } from './page/list/accordion/accordion.component';
 import { UserBarInfoComponent } from './page/user-bar-info/user-bar-info.component';
 import { LinkToProfilComponent } from './page/user-bar-info/link-to-profil/link-to-profil.component';
 import { UserImageComponent } from './page/user-bar-info/user-image/user-image.component';
+import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UserImageComponent } from './page/user-bar-info/user-image/user-image.c
     UserBarInfoComponent,
     LinkToProfilComponent,
     UserImageComponent,
-    FilterForTasksPipe
+    FilterForTasksPipe,
+    NavbarProfileComponent
   ],
   imports: [
     BrowserModule,
