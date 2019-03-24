@@ -30,6 +30,7 @@ $base-font-size: 14px;
 $base-line-height: 16px;
 
 .main-wrapper {
+  padding: 90px 0 20px 0;
   min-height: 100vh;
   font-family: $font-stack;
   font-size: $base-font-size;
@@ -37,6 +38,7 @@ $base-line-height: 16px;
   background: $bg-color;
   color: $primary-color;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .filter-wrapper {
@@ -85,4 +87,11 @@ $base-line-height: 16px;
       display: block;
     }
   }
+}
+
+.container-fluid.header-navbar {
+  position: fixed;
+  top: 0;
+  padding: 0;
+  z-index: 1000;
 }
