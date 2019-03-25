@@ -1,9 +1,9 @@
-<accordion>
-  <accordion-group #group *ngFor="let item of items">
-    <div accordion-heading class="heading-grid">
+<accordion [closeOthers]="oneAtATime">
+  <accordion-group *ngFor="let item of items;" #group>
+    <div accordion-heading class="heading-grid">     
       <div class="heading-text">
         <h5>{{item.name}}</h5>
-        <p>{{item.excerpt}}</p>
+        <p class="excerpt">{{item.excerpt}}</p>
       </div>
       <div class="heading-filter">
         <p>{{item.status.name}}</p>
@@ -23,7 +23,7 @@
         <span class="bold">{{item.author}}</span>
       </div>
       <div class="re-assign">
-        <button type="submit" class="btn btn-outline-primary text-reassign">RE-ASSIGN</button>
+        <button type="submit" class="btn btn-outline-primary text-reassign">RE-ASSIGN</button> 
       </div>
     </div>
   </accordion-group>
