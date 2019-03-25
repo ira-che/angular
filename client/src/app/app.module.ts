@@ -19,6 +19,8 @@ import { UserBarInfoComponent } from './page/user-bar-info/user-bar-info.compone
 import { LinkToProfileComponent } from './page/user-bar-info/link-to-profile/link-to-profile.component';
 import { UserImageComponent } from './page/user-bar-info/user-image/user-image.component';
 import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
+import { AddTaskButtonComponent } from './page/add-task-button/add-task-button.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -35,13 +37,14 @@ import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-prof
     UserImageComponent,
     FilterForTasksPipe,
     NavbarProfileComponent,
+    AddTaskButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     AccordionModule.forRoot(),
-
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
