@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinkToProfilComponent } from './link-to-profil.component';
+import { AddTaskButtonComponent } from './add-task-button.component';
 
-describe('LinkToProfilComponent', () => {
-  let component: LinkToProfilComponent;
-  let fixture: ComponentFixture<LinkToProfilComponent>;
+describe('AddTaskButtonComponent', () => {
+  let component: AddTaskButtonComponent;
+  let fixture: ComponentFixture<AddTaskButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LinkToProfilComponent ]
+      declarations: [ AddTaskButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LinkToProfilComponent);
+    fixture = TestBed.createComponent(AddTaskButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

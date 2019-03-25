@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserBarInfoComponent implements OnInit {
   @Input() userinfo: {};
-  // managerInfo: {};
 
   constructor() {
   }

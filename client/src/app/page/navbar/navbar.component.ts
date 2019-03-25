@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isActive:boolean = false;
+  @Input() menuBurger:any;
+  @Input() menuRight:any;
   constructor() { }
 
   ngOnInit() {
   }
-
+  changeCurrent(index, links) {
+      event.preventDefault();
+      links.forEach(item => {
+        item.isCurrent = false
+      })
+      links[index].isCurrent = true;
+    }
 }
