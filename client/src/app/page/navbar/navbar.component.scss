@@ -19,7 +19,6 @@ nav {
     color: $textColor;
     background-color: rgba(38, 152, 251, 0.918)!important;
 }
-
 .hide-menu {
     position: absolute;
     top: 57px;
@@ -39,22 +38,29 @@ nav {
         list-style-type: none;
     }
     &__item { 
-        text-transform: uppercase;
-        font: 10px Arial, sans-serif;
-        font-weight: normal;
         padding-top: 30px;
         cursor: pointer;
+        a {
+            font: 10px Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: normal;
+            width: 100%;
+            color: $textColor;
+        }
         &:active, &:focus, &:hover {
             border-bottom: 1px solid $textColor;
             margin-bottom:-1px;
         }
     }
 }
+.user-info {
+    width: 100%;
+}
 
 .active {
     left: -15px;
 }
-
-.user-info {
-    width: 100%;
+.current {
+    border-bottom: 1px solid $textColor;
+    margin-bottom:-1px;
 }
