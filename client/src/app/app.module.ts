@@ -21,7 +21,6 @@ import { UserImageComponent } from './page/user-bar-info/user-image/user-image.c
 import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
 import { AddTaskButtonComponent } from './page/add-task-button/add-task-button.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -46,7 +45,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     BsDropdownModule.forRoot(),
     AccordionModule.forRoot(),
     ModalModule.forRoot(),
-    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
