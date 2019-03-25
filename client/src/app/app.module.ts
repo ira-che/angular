@@ -34,13 +34,14 @@ import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-prof
     LinkToProfileComponent,
     UserImageComponent,
     FilterForTasksPipe,
-    NavbarProfileComponent
+    NavbarProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

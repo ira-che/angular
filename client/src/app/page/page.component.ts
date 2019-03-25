@@ -21,6 +21,7 @@ export class PageComponent implements OnInit {
       },
       tasks: [
         {
+          id: "1",
           name: 'Upcoming task name',
           excerpt: 'This content is straight in the template.',
           status: { name: 'LOW', value: 2 },
@@ -32,6 +33,7 @@ export class PageComponent implements OnInit {
             'ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
+          id: "2",
           name: 'Upcoming task name2',
           excerpt: 'This content is straight in the template2.',
           status: { name: 'HIGHT', value: 0 },
@@ -43,6 +45,7 @@ export class PageComponent implements OnInit {
             'ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
+          id: "3",
           name: 'Upcoming task name3',
           excerpt: 'This content is straight in the template3.',
           status: { name: 'LOW', value: 2 },
@@ -54,9 +57,10 @@ export class PageComponent implements OnInit {
             'exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
+          id: "4",
           name: 'Upcoming task name4',
           excerpt: 'This content is straight in the template4.',
-          status: { name: 'MEDIUM', value: 1 },
+          status: { name: 'NORMAL', value: 1 },
           type: { name: 'task', value: 0 },
           date: '25/03/2019',
           author: 'Alex1 Somename',
@@ -65,6 +69,7 @@ export class PageComponent implements OnInit {
             'exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
+          id: "5",
           name: 'Upcoming task name5',
           excerpt: 'This content is straight in the template5.',
           status: { name: 'LOW', value: 2 },
