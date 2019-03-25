@@ -1,0 +1,65 @@
+<div class="btn-group {{cssClass}}" dropdown>
+  <!--<button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle filter-el" aria-controls="dropdown-basic">-->
+    <!--{{ title }} <span class="caret"></span>-->
+  <!--</button>-->
+  <a href id="basic-link" dropdownToggle (click) = false
+     aria-controls="basic-link-dropdown">{{ title }}</a>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu filter-el" role="menu" aria-labelledby="button-basic">
+    <li>
+      <bs-datepicker-inline [bsValue]="bsInlineValue"></bs-datepicker-inline>
+      <!--<input type = "text"-->
+      <!--placeholder = '{{title}}'-->
+      <!--class = "form-control"-->
+      <!--#dp = "bsDatepicker"-->
+      <!--[bsConfig] = "{ dateInputFormat: 'DD / MM / YYYY' }"-->
+      <!--[isOpen] = true-->
+      <!--bsDatepicker-->
+      <!--/>-->
+    </li>
+        <!--<li role="menuitem" *ngFor="let opt of options;">-->
+      <!--<a class="dropdown-item {{ isSelected(opt.value) }}" href="#" (click)="selectIt(opt.value, $event)">{{ opt.name }}</a>-->
+    <!--</li>-->
+  </ul>
+</div>
+
+
+<!--<div (clickOutside) = "onClickedOutside($event)" (blur) = "onClickedOutside($event)" class="filter-calendar-wrapper">-->
+  <!--<div class="form-group date">-->
+    <!--<input (change)="changedDate()" type="text" [ngModel]="value" class="form-control" id="{{id}}"-->
+           <!--(focus)="openCloseDatepicker()" disabled="{{ disabledInput }}" />-->
+    <!--<span id="openCloseDatePicker" class="input-group-addon" (click)="openCloseDatepicker()">-->
+        <!--<span class="glyphicon-calendar glyphicon"></span>-->
+    <!--</span>-->
+  <!--</div>-->
+  <!--<div class="dp-popup" *ngIf="showDatepicker">-->
+    <!--here-->
+    <!--&lt;!&ndash;<input type = "text"&ndash;&gt;-->
+           <!--&lt;!&ndash;placeholder = '{{title}}'&ndash;&gt;-->
+           <!--&lt;!&ndash;class = "form-control"&ndash;&gt;-->
+           <!--&lt;!&ndash;#dp = "bsDatepicker"&ndash;&gt;-->
+           <!--&lt;!&ndash;[bsConfig] = "{ dateInputFormat: 'DD / MM / YYYY', adaptivePosition: true, customTodayClass: 'custom-today-class' }"&ndash;&gt;-->
+           <!--&lt;!&ndash;(bsValueChange)="dateSelected($event)"&ndash;&gt;-->
+           <!--&lt;!&ndash;bsDatepicker&ndash;&gt;-->
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+<!--<div class="form-group {{cssClass}}">-->
+  <!--<input type = "text"-->
+         <!--placeholder = '{{title}}'-->
+         <!--class = "form-control"-->
+         <!--#dp = "bsDatepicker"-->
+         <!--[bsConfig] = "{ dateInputFormat: 'DD / MM / YYYY', adaptivePosition: true, customTodayClass: 'custom-today-class' }"-->
+         <!--ngModel-->
+         <!--(ngModelChange)="this.filterVal.emit($event)"-->
+         <!--bsDatepicker-->
+  <!--/>-->
+  <!--&lt;!&ndash;(bsValueChange)="onValueChange($event)"&ndash;&gt;-->
+  <!--&lt;!&ndash;(bsValueChange)="onValueChange($event)"&ndash;&gt;-->
+  <!--&lt;!&ndash;(onHidden)= "this.filterVal.emit($event)"&ndash;&gt;-->
+  <!--&lt;!&ndash;[(bsValue)] = "dateValue"&ndash;&gt;-->
+  <!--&lt;!&ndash;(bsValueChange)= "this.filterVal.emit($event)"&ndash;&gt;-->
+<!--</div>-->

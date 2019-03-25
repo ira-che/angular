@@ -98,12 +98,15 @@ export class PageComponent implements OnInit {
             { name: 'Low', value: 2 },
           ],
         },
-        // {
-        //   "title": "Filter by date",
-        //   "selectedId": -1,
-        //   "isCalendar": true,
-        //   "arr": ["21/03/2019"],
-        // }
+        {
+          name: 'date',
+          isCalendar: true,
+          defaultValue: -1,
+          options: [
+           { name: 'Filter By Date', value: -1 },
+           { name: '26/03/2019', value: 0 }
+          ],
+        }
       ]
     };
 
@@ -117,14 +120,38 @@ export class PageComponent implements OnInit {
 
   selectFilterOption = (data: any) => {
     if (this.jsonData.filters.length) {
+      console.log('fiiiilters');
+      console.log(this.jsonData.filters);
+      console.log('data.optionId');
+      console.log(data.optionId);
       this.jsonData.filters = this.jsonData.filters.map(
           (item, index) => index === data.filterId ? {
                           name: item.name,
                           isCalendar: item.isCalendar,
-                          defaultValue: data.optionId,
-                          options: item.options
+                          defaultValue: (item.isCalendar) ? 0 : data.optionId,
+                          options: (item.isCalendar) ? this.saveDate(data.optionId, item.options) : item.options
                         } : item
         );
+      console.log(this.jsonData.filters);
     }
+  }
+
+  saveDate = (date: Date, options: []) => {
+    let newOpt: [];
+    console.log('newOpt');
+    newOpt = options.map( (opt: {name, value}) => console.log(opt));
+    newOpt = options.map( (opt: {name, value}) => (opt.value === -1) ? opt : { name: this.dateToString(new Date(date)), value: 0});
+    return newOpt;
+  }
+
+  dateToString = (date: Date) => {
+    console.log('before date ' + date);
+    const year = date.getFullYear();
+    let month = (1 + date.getMonth()).toString();
+    month = month.length > 1 ? month : '0' + month;
+    let day = date.getDate().toString();
+    day = day.length > 1 ? day : '0' + day;
+    console.log('date ' + month + '/' + day + '/' + year);
+    return day + '/' + month + '/' +  year;
   }
 }
