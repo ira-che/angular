@@ -13,41 +13,41 @@ export class PageComponent implements OnInit {
     this.jsonData = {
       menuRight: [
         {
-          id: 1, 
-          href: "#1",
-          title: "Log Out",
+          id: 1,
+          href: '#1',
+          title: 'Log Out',
           isCurrent: false,
         },
         {
-          id: 2, 
-          href: "#1",
-          title: "Edit Profile",
+          id: 2,
+          href: '#2',
+          title: 'Edit Profile',
           isCurrent: false,
         }
       ],
       menuBurger: [
         {
-          id: 1, 
-          href: "#1",
-          title: "upcoming tasks",
+          id: 1,
+          href: '#1',
+          title: 'upcoming tasks',
           isCurrent: true,
         },
-        { 
-          id: 2, 
-          href: "#2",
-          title: "contact info",
+        {
+          id: 2,
+          href: '#2',
+          title: 'contact info',
           isCurrent: false,
         },
-        { 
-          id: 3, 
-          href: "#3",
-          title: "my profile",
+        {
+          id: 3,
+          href: '#3',
+          title: 'my profile',
           isCurrent: false,
         },
-        { 
-          id: 4, 
-          href: "#4",
-          title: "create user",
+        {
+          id: 4,
+          href: '#4',
+          title: 'create user',
           isCurrent: false,
         }
       ],
@@ -61,7 +61,7 @@ export class PageComponent implements OnInit {
       },
       tasks: [
         {
-          id: "1",
+          id: 1,
           name: 'Upcoming task name',
           excerpt: 'This content is straight in the template.',
           status: { name: 'LOW', value: 2 },
@@ -73,7 +73,7 @@ export class PageComponent implements OnInit {
             'ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
-          id: "2",
+          id: 2,
           name: 'Upcoming task name2',
           excerpt: 'This content is straight in the template2.',
           status: { name: 'HIGHT', value: 0 },
@@ -85,7 +85,7 @@ export class PageComponent implements OnInit {
             'ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
-          id: "3",
+          id: 3,
           name: 'Upcoming task name3',
           excerpt: 'This content is straight in the template3.',
           status: { name: 'LOW', value: 2 },
@@ -97,7 +97,7 @@ export class PageComponent implements OnInit {
             'exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
-          id: "4",
+          id: 4,
           name: 'Upcoming task name4',
           excerpt: 'This content is straight in the template4.',
           status: { name: 'NORMAL', value: 1 },
@@ -109,7 +109,7 @@ export class PageComponent implements OnInit {
             'exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis',
         },
         {
-          id: "5",
+          id: 5,
           name: 'Upcoming task name5',
           excerpt: 'This content is straight in the template5.',
           status: { name: 'LOW', value: 2 },
@@ -143,15 +143,15 @@ export class PageComponent implements OnInit {
             { name: 'Low', value: 2 },
           ],
         },
-        {
-          name: 'date',
-          isCalendar: true,
-          defaultValue: -1,
-          options: [
-           { name: 'Filter By Date', value: -1 },
-           { name: '26/03/2019', value: 0 }
-          ],
-        }
+        // {
+        //   name: 'date',
+        //   isCalendar: true,
+        //   defaultValue: -1,
+        //   options: [
+        //    { name: 'Filter By Date', value: -1 },
+        //    { name: '26/03/2019', value: 0 }
+        //   ],
+        // }
       ]
     };
 
@@ -165,38 +165,42 @@ export class PageComponent implements OnInit {
 
   selectFilterOption = (data: any) => {
     if (this.jsonData.filters.length) {
-      console.log('fiiiilters');
-      console.log(this.jsonData.filters);
-      console.log('data.optionId');
-      console.log(data.optionId);
+      // console.log('fiiiilters');
+      // console.log(this.jsonData.filters);
+      // console.log('data.optionId');
+      // console.log(data.optionId);
       this.jsonData.filters = this.jsonData.filters.map(
           (item, index) => index === data.filterId ? {
                           name: item.name,
                           isCalendar: item.isCalendar,
-                          defaultValue: (item.isCalendar) ? 0 : data.optionId,
-                          options: (item.isCalendar) ? this.saveDate(data.optionId, item.options) : item.options
+                          defaultValue: data.optionId,
+                          options: item.options
                         } : item
         );
-      console.log(this.jsonData.filters);
+      // this.jsonData.filters = this.jsonData.filters.map(
+      //     (item, index) => index === data.filterId ? {
+      //                     name: item.name,
+      //                     isCalendar: item.isCalendar,
+      //                     defaultValue: (item.isCalendar) ? 0 : data.optionId,
+      //                     options: (item.isCalendar) ? this.saveDate(data.optionId, item.options) : item.options
+      //                   } : item
+      //   );
+      // console.log(this.jsonData.filters);
     }
   }
 
-  saveDate = (date: Date, options: []) => {
-    let newOpt: [];
-    console.log('newOpt');
-    newOpt = options.map( (opt: {name, value}) => console.log(opt));
-    newOpt = options.map( (opt: {name, value}) => (opt.value === -1) ? opt : { name: this.dateToString(new Date(date)), value: 0});
-    return newOpt;
-  }
-
-  dateToString = (date: Date) => {
-    console.log('before date ' + date);
-    const year = date.getFullYear();
-    let month = (1 + date.getMonth()).toString();
-    month = month.length > 1 ? month : '0' + month;
-    let day = date.getDate().toString();
-    day = day.length > 1 ? day : '0' + day;
-    console.log('date ' + month + '/' + day + '/' + year);
-    return day + '/' + month + '/' +  year;
-  }
+  // saveDate = (date: Date, options: []) => {
+  //   return options.map( (opt: {name, value}) => (opt.value === -1) ? opt : { name: this.dateToString(new Date(date)), value: 0});
+  // }
+  //
+  // dateToString = (date: Date) => {
+  //   console.log('before date ' + date);
+  //   const year = date.getFullYear();
+  //   let month = (1 + date.getMonth()).toString();
+  //   month = month.length > 1 ? month : '0' + month;
+  //   let day = date.getDate().toString();
+  //   day = day.length > 1 ? day : '0' + day;
+  //   console.log('date ' + month + '/' + day + '/' + year);
+  //   return day + '/' + month + '/' +  year;
+  // }
 }

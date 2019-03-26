@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { FilterForTasksPipe } from './app.pipe.filterForTasks';
 
@@ -20,7 +22,6 @@ import { LinkToProfileComponent } from './page/user-bar-info/link-to-profile/lin
 import { UserImageComponent } from './page/user-bar-info/user-image/user-image.component';
 import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
 import { AddTaskButtonComponent } from './page/add-task-button/add-task-button.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BsDropdownModule.forRoot(),
     AccordionModule.forRoot(),
     ModalModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
