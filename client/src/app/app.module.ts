@@ -21,7 +21,13 @@ import { UserBarInfoComponent } from './page/user-bar-info/user-bar-info.compone
 import { LinkToProfileComponent } from './page/user-bar-info/link-to-profile/link-to-profile.component';
 import { UserImageComponent } from './page/user-bar-info/user-image/user-image.component';
 import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
+
+import { ModalComponent } from './page/modal/modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ItemComponent } from './page/list/accordion/item/item.component';
+
 import { AddTaskButtonComponent } from './page/add-task-button/add-task-button.component';
+
 
 
 @NgModule({
@@ -38,7 +44,12 @@ import { AddTaskButtonComponent } from './page/add-task-button/add-task-button.c
     UserImageComponent,
     FilterForTasksPipe,
     NavbarProfileComponent,
+
+    ModalComponent,
+    ItemComponent,
+
     AddTaskButtonComponent
+
   ],
   imports: [
     BrowserModule,
