@@ -23,7 +23,6 @@ import { UserImageComponent } from './page/user-bar-info/user-image/user-image.c
 import { NavbarProfileComponent } from './page/navbar/navbar-profile/navbar-profile.component';
 
 import { ModalComponent } from './page/modal/modal.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { ItemComponent } from './page/list/accordion/item/item.component';
 
 import { AddTaskButtonComponent } from './page/add-task-button/add-task-button.component';
